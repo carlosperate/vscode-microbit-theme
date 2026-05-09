@@ -1,0 +1,69 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Package only, do not publish"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Publish Extension
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20.x
+
+      - name: Verify package.json version matches release tag
+        if: github.event_name == 'release'
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          echo "package.json: $PKG_VERSION"
+          echo "release tag : $TAG_VERSION"
+          if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then
+            echo "::error::package.json version ($PKG_VERSION) does not match release tag ($TAG_VERSION)"
+            exit 1
+          fi
+
+      - name: Package VSIX
+        run: |
+          VSIX_NAME="microbit-themes-${GITHUB_REF_NAME:-v$(node -p "require('./package.json').version")}.vsix"
+          npx --yes @vscode/vsce package --out "$VSIX_NAME"
+          echo "VSIX_NAME=$VSIX_NAME" >> "$GITHUB_ENV"
+
+      - name: Upload VSIX to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$GITHUB_REF_NAME" "$VSIX_NAME" --clobber
+
+      - name: Upload VSIX as workflow artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: microbit-themes-vsix
+          path: '*.vsix'
+          if-no-files-found: error
+
+      - name: Publish to VS Code Marketplace
+        if: github.event_name == 'release' || inputs.dry_run == false
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: npx --yes @vscode/vsce publish --packagePath "$VSIX_NAME"
+
+      - name: Publish to Open VSX Registry
+        if: github.event_name == 'release' || inputs.dry_run == false
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+        run: npx --yes ovsx publish "$VSIX_NAME"
