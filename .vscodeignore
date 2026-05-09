@@ -1,0 +1,10 @@
+.vscode/**
+.github/**
+microbit-themes-design-files/**
+docs/**
+plan.md
+TODO.md
+.gitignore
+.vscodeignore
+**/.DS_Store
+*.vsix

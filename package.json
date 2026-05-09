@@ -1,0 +1,70 @@
+{
+  "name": "microbit-themes",
+  "displayName": "micro:bit Themes",
+  "description": "Six VS Code colour themes (Pixel, Spark, Halo — light and dark) inspired by micro:bit.",
+  "version": "0.1.0",
+  "publisher": "carlosperate",
+  "license": "MIT",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "microbit",
+    "micro:bit",
+    "theme",
+    "colour-theme",
+    "color-theme",
+    "dark",
+    "light"
+  ],
+  "galleryBanner": {
+    "color": "#0f1815",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlosperate/vscode-microbit-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carlosperate/vscode-microbit-themes/issues"
+  },
+  "homepage": "https://github.com/carlosperate/vscode-microbit-themes#readme",
+  "contributes": {
+    "themes": [
+      {
+        "label": "micro:bit Pixel Light",
+        "uiTheme": "vs",
+        "path": "./themes/microbit-pixel-light.json"
+      },
+      {
+        "label": "micro:bit Pixel Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/microbit-pixel-dark.json"
+      },
+      {
+        "label": "micro:bit Spark Light",
+        "uiTheme": "vs",
+        "path": "./themes/microbit-spark-light.json"
+      },
+      {
+        "label": "micro:bit Spark Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/microbit-spark-dark.json"
+      },
+      {
+        "label": "micro:bit Halo Light",
+        "uiTheme": "vs",
+        "path": "./themes/microbit-halo-light.json"
+      },
+      {
+        "label": "micro:bit Halo Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/microbit-halo-dark.json"
+      }
+    ]
+  }
+}
