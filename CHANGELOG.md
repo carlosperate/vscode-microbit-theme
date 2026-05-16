@@ -16,8 +16,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - micro:bit Spark Light / Dark (Red & Orange chrome)
   - micro:bit Halo Light / Dark (Purple & Teal chrome)
 - Semantic highlighting enabled across all themes.
-- Palette-derived colours for diff editor, merge editor, peek view,
-  notebooks, debug UI, git decorations, suggest/hover widgets, quick
-  input, source control, and problems icons (71 additional keys per
-  theme).
 - Bracket-pair colouring tuned to the micro:bit palette.
