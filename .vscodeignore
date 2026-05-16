@@ -2,8 +2,13 @@
 .github/**
 microbit-themes-design-files/**
 docs/**
-plan.md
+src/**
+node_modules/**
+tsconfig.json
 TODO.md
+AGENTS.md
+CLAUDE.md
+package-lock.json
 .gitignore
 .vscodeignore
 **/.DS_Store

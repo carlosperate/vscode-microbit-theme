@@ -9,6 +9,15 @@
   "engines": {
     "vscode": "^1.74.0"
   },
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "vscode:prepublish": "tsx src/build.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
   "categories": [
     "Themes"
   ],
