@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.0 - 2026-05-?? (Unreleased)
+## v0.1.0 - 2026-05-20
 
 - Initial release with six color themes:
   - micro:bit Pixel Light / Dark (Green & Blue chrome)

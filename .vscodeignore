@@ -1,13 +1,10 @@
 .vscode/**
 .github/**
-microbit-themes-design-files/**
 docs/**
 src/**
+scripts/**
 node_modules/**
 tsconfig.json
-TODO.md
-AGENTS.md
-CLAUDE.md
 package-lock.json
 .gitignore
 .vscodeignore
