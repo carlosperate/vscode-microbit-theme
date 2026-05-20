@@ -3,8 +3,8 @@
 Six VS Code colour themes inspired by the micro:bit.
 **Pixel**, **Spark**, and **Halo**, each in light and dark versions.
 
-![placeholder hero screenshot](docs/screenshots/hero.png)
-*Hero screenshot pending.*
+![screenshot with all themes](docs/screenshots/preview-small.png)
+
 
 ## Themes
 
@@ -31,40 +31,9 @@ Six VS Code colour themes inspired by the micro:bit.
 2. Run **Preferences: Color Theme**.
 3. Pick any **micro:bit …** entry.
 
-## Screenshots
-
-Screenshots of each theme live in `docs/screenshots/`. They are not
-yet captured — see `TODO.md`.
-
-## Local development
-
-This is a themes-only extension; no compilation is needed.
-
-1. Open the repo in VS Code.
-2. Press `F5` — the Extension Development Host launches with the
-   themes available.
-3. In the dev host: **F1 → Preferences: Color Theme** to pick one.
-
-To produce a `.vsix` for manual install or release:
-
-```sh
-npm install -g @vscode/vsce
-vsce package
-code --install-extension microbit-themes-<version>.vsix
-```
-
-To list everything that would ship and validate the manifest without
-producing a package:
-
-```sh
-vsce ls
-```
-
-## Disclaimer
-
-These themes are not affiliated with or endorsed by the Micro:bit
-Educational Foundation.
-
 ## License
 
 [MIT](LICENSE).
+
+These themes are not affiliated with or endorsed by the Micro:bit
+Educational Foundation.
