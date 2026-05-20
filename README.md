@@ -1,6 +1,6 @@
-# micro:bit Themes for VS Code
+# micro:bit Inspired Themes for VS Code
 
-Six VS Code colour themes inspired by the micro:bit.
+Six VS Code colour themes inspired by the BBC micro:bit.
 **Pixel**, **Spark**, and **Halo**, each in light and dark versions.
 
 ![screenshot with all themes](docs/screenshots/preview-small.png)

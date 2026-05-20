@@ -1,6 +1,6 @@
 {
-  "name": "microbit-theme",
-  "displayName": "micro:bit Themes",
+  "name": "microbit-themes",
+  "displayName": "micro:bit Inspired Themes",
   "description": "Six VS Code colour themes, Pixel, Spark, Halo (light and dark) inspired by micro:bit.",
   "version": "0.1.0",
   "publisher": "carlosperate",
@@ -39,12 +39,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/carlosperate/vscode-microbit-theme.git"
+    "url": "https://github.com/carlosperate/vscode-microbit-themes.git"
   },
   "bugs": {
-    "url": "https://github.com/carlosperate/vscode-microbit-theme/issues"
+    "url": "https://github.com/carlosperate/vscode-microbit-themes/issues"
   },
-  "homepage": "https://github.com/carlosperate/vscode-microbit-theme#readme",
+  "homepage": "https://github.com/carlosperate/vscode-microbit-themes#readme",
   "contributes": {
     "themes": [
       {
