@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Marketplace icon source. Edit the CSS variables below to retint.
+     Rasterise to icon.png with: npm run icon:rasterise -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <style>
+    /* Edit these four lines to retint the icon, then run:
+         npm run icon:rasterise
+       (librsvg, the rasteriser, doesn't support CSS custom properties,
+       so colours are inlined on the class selectors directly.) */
+    .plate { fill: #0f1815; } /* backplate, matches galleryBanner.color */
+    .halo  { fill: #6c4bc1; } /* purple    — top-left band */
+    .pixel { fill: #00a000; } /* green     — middle diagonal (signature micro:bit) */
+    .spark { fill: #cd0365; } /* raspberry — bottom-right band */
+  </style>
+
+  <!-- Backplate: 112x112 rounded square, 8px inset, 20px corner radius -->
+  <rect class="plate" x="8" y="8" width="112" height="112" rx="20" ry="20"/>
+
+  <!-- 5x5 LED grid: dot=12, gap=7, total 88x88, offset 20 from each edge.
+       Anti-diagonal bands by (col+row): 0-2 halo, 3-5 pixel, 6-8 spark. -->
+
+  <!-- row 0 -->
+  <circle class="halo"  cx="26"  cy="26"  r="6"/>
+  <circle class="halo"  cx="45"  cy="26"  r="6"/>
+  <circle class="halo"  cx="64"  cy="26"  r="6"/>
+  <circle class="pixel" cx="83"  cy="26"  r="6"/>
+  <circle class="pixel" cx="102" cy="26"  r="6"/>
+
+  <!-- row 1 -->
+  <circle class="halo"  cx="26"  cy="45"  r="6"/>
+  <circle class="halo"  cx="45"  cy="45"  r="6"/>
+  <circle class="pixel" cx="64"  cy="45"  r="6"/>
+  <circle class="pixel" cx="83"  cy="45"  r="6"/>
+  <circle class="pixel" cx="102" cy="45"  r="6"/>
+
+  <!-- row 2 -->
+  <circle class="halo"  cx="26"  cy="64"  r="6"/>
+  <circle class="pixel" cx="45"  cy="64"  r="6"/>
+  <circle class="pixel" cx="64"  cy="64"  r="6"/>
+  <circle class="pixel" cx="83"  cy="64"  r="6"/>
+  <circle class="spark" cx="102" cy="64"  r="6"/>
+
+  <!-- row 3 -->
+  <circle class="pixel" cx="26"  cy="83"  r="6"/>
+  <circle class="pixel" cx="45"  cy="83"  r="6"/>
+  <circle class="pixel" cx="64"  cy="83"  r="6"/>
+  <circle class="spark" cx="83"  cy="83"  r="6"/>
+  <circle class="spark" cx="102" cy="83"  r="6"/>
+
+  <!-- row 4 -->
+  <circle class="pixel" cx="26"  cy="102" r="6"/>
+  <circle class="pixel" cx="45"  cy="102" r="6"/>
+  <circle class="spark" cx="64"  cy="102" r="6"/>
+  <circle class="spark" cx="83"  cy="102" r="6"/>
+  <circle class="spark" cx="102" cy="102" r="6"/>
+</svg>

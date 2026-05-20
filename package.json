@@ -12,6 +12,7 @@
   "scripts": {
     "build": "tsx src/build.ts",
     "screenshots:compose": "tsx scripts/compose-screenshots.ts",
+    "icon:rasterise": "tsx scripts/rasterise-icon.ts",
     "vscode:prepublish": "npm run build"
   },
   "devDependencies": {
